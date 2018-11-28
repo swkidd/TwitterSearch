@@ -1,3 +1,10 @@
-<p>
-  main-map works!
-</p>
+<mat-grid-list [cols]="2">
+  <mat-grid-tile>
+      <iframe *ngIf="loadMap" class="frame"
+        [src]="mapsUrl | safe" allowfullscreen>
+      </iframe>
+  </mat-grid-tile>
+  <mat-grid-tile>
+      <app-main-search (currentLocation)="setMapPosition($event.latitude, $event.longitude)"></app-main-search>
+  </mat-grid-tile>
+</mat-grid-list>

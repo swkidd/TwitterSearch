@@ -11,7 +11,8 @@ import { MaterialModule } from './material';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { MainSearchComponent } from './main-search/main-search.component';
 
-import {DecimalPipe} from "@angular/common";
+import { DecimalPipe } from "@angular/common";
+import { SafePipe } from "./pipe/safe.pipe"
 import { SearchService } from "./service/search.service";
 import { RouterModule, Routes} from "@angular/router";
 import { MainMapComponent } from './main-map/main-map.component';
@@ -20,7 +21,7 @@ const appRoutes: Routes = [
   { path: '', redirectTo: '/search', pathMatch: 'full' },
   { path: 'search', component: MainSearchComponent },
   { path: 'map', component: MainMapComponent },
-]
+];
 
 
 @NgModule({
@@ -28,7 +29,8 @@ const appRoutes: Routes = [
     AppComponent,
     MainNavComponent,
     MainSearchComponent,
-    MainMapComponent
+    MainMapComponent,
+    SafePipe,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
   ],
   providers: [SearchService, DecimalPipe],
   bootstrap: [AppComponent]
