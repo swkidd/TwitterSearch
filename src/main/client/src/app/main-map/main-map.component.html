@@ -5,6 +5,8 @@
       </iframe>
   </mat-grid-tile>
   <mat-grid-tile>
+    <div class="scroll-box">
       <app-main-search (currentLocation)="setMapPosition($event.latitude, $event.longitude)"></app-main-search>
+    </div>
   </mat-grid-tile>
 </mat-grid-list>

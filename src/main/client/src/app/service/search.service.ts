@@ -12,6 +12,6 @@ export class SearchService {
 
   public search(query: Query) {
     let headers: any = { headers: new HttpHeaders({'Content-Type': 'application/json'})};
-    return this.http.post<QueryResponse>("http://localhost:8080/api/search", query, headers);
+    return this.http.post<QueryResponse>("http://192.168.11.231:8080/api/search", query, headers);
   }
 }

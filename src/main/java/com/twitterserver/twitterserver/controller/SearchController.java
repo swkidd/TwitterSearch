@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 public class SearchController {
     @PostMapping("/search")
     @ResponseBody QueryResult postSearch(@RequestBody Query query) {
-        String url = "http://localhost:8081/api/search";
+        String url = "http://192.168.11.231:8081/api/search";
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
